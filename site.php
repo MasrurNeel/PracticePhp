@@ -308,6 +308,57 @@
                $x+=10;
            }while($x <= 100);
          ?>
+<br><br>
+         <?php
+         $luckNumbers = array(4,8,14,16,23,42);
+         for($i = 0; $i < count($luckNumbers); $i++){
+          echo "$luckNumbers[$i] <br>";
+         }
+         ?>
+<br><br>
+        <?php
+        $colors = array("red", "green", "blue", "yellow");
+
+        foreach ($colors as $value) {
+        echo "$value <br>";
+        }
+         ?>
+<br><br>
+        <?php
+        $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+
+        foreach($age as $x => $val) {
+        echo "$x = $val<br>";
+        }
+       ?>
+<br><br>
+       <?php
+          echo include "header.html";
+       ?>
+        <p>Hello World</p>
+       <?php
+         echo include "footer.html";
+       ?>
+<br><br>
+       <?php
+       $title = "This is my First Post";
+       $author = "Mas";
+       $wordCount = "400";
+       include "article-header.php"
+       ?>
+<br><br>
+       <?php
+       include "useful-tools.php";
+       echo $feelInMile;
+        callhi("mas");
+       ?>
+<br><br>
+        <?php
+
+
+
+
+        ?>
 
 
 
