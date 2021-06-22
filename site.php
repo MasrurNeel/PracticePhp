@@ -274,12 +274,40 @@
           break;
            default:
                echo "Invalid grade";
-
        }
-
        ?>
-
-
+<br><br>
+        <?php
+        $index = 1;
+        while($index <= 5){
+            echo "$index <br>";
+            $index++;
+        }
+        ?>
+<br><br>
+        <?php
+        $index = 6;
+        do{
+            echo "$index <br>";
+             $index++;
+        }while($index <= 5);
+        ?>
+<br><br>
+        <?php
+          $x=0;
+          while($x <= 100){
+              echo "$x<br>";
+              $x+=10;//$x+=10;Increase the loop counter value by 10 for each
+          }
+        ?>
+<br><br>
+         <?php
+         $x=101;
+           do{
+               echo "$x<br>";
+               $x+=10;
+           }while($x <= 100);
+         ?>
 
 
 
