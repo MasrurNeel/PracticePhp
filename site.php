@@ -354,11 +354,78 @@
        ?>
 <br><br>
         <?php
-
-
-
-
+         class Book {
+          var $title;
+          var $author;
+          var $pages;
+         }
+         $book1 = new book;
+         $book1->title= "Harry Potter";
+         $book1->author= "JK Rowling";
+         $book1->pages= 4000;
+         echo "$book1->author<br>";
+        $book2 = new book;
+        $book2->title= "Lord of the rings";
+        $book2->author= "Tolkien";
+        $book2->pages= 700;
+          echo "$book2->author";
         ?>
+<br><br>
+<?php
+class Fruit {
+    // Properties
+    var $name;
+    var $color;
+
+    // Methods
+    function set_name($name, $color) {
+        $this->name = $name;
+        $this->color = $color;
+    }
+    function get_name() {
+        return $this->name;
+        return $this->color;
+    }
+}
+$mango = new Fruit();
+$pears = new Fruit();
+$mango -> set_name('Mango');
+$pears ->set_name ('Pears');
+echo $pears -> get_name();
+echo "<br>";
+echo $mango -> get_name();
+echo "<br>";
+
+$yellow = new Fruit();
+$red = new Fruit();
+
+
+?>
+<br><br>
+<?/*php
+class Fruit {
+    // Properties
+    public $name;
+    public $color;
+
+    // Methods
+    function set_name($name) {
+        $this->name = $name;
+    }
+    function get_name() {
+        return $this->name;
+    }
+}
+
+$apple = new Fruit();
+$banana = new Fruit();
+$apple->set_name('Apple');
+$banana->set_name('Banana');
+
+echo $apple->get_name();
+echo "<br>";
+echo $banana->get_name();*/
+?>
 
 
 

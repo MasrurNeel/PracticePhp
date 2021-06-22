@@ -29,9 +29,11 @@
       <file leaf-file-name="site.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="362" column="0" lean-forward="true" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-106">
+              <caret line="391" column="26" lean-forward="false" selection-start-line="391" selection-start-column="26" selection-end-line="391" selection-end-column="26" />
+              <folding>
+                <element signature="e#9168#9555#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,7 +151,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="G:/bitm-PHP/Busina" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -246,12 +248,12 @@
       <updated>1624199589139</updated>
       <workItem from="1624199590483" duration="10521000" />
       <workItem from="1624248791383" duration="17456000" />
-      <workItem from="1624347680184" duration="8308000" />
+      <workItem from="1624347680184" duration="12005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36285000" />
+    <option name="totallyTimeSpent" value="39982000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -300,7 +302,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#9168#9555#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -308,7 +312,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#9168#9555#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -353,9 +359,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="362" column="0" lean-forward="true" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-106">
+          <caret line="391" column="26" lean-forward="false" selection-start-line="391" selection-start-column="26" selection-end-line="391" selection-end-column="26" />
+          <folding>
+            <element signature="e#9168#9555#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
