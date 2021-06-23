@@ -276,6 +276,7 @@
                echo "Invalid grade";
        }
        ?>
+<!--while loop--first check condition then execute-->
 <br><br>
         <?php
         $index = 1;
@@ -284,6 +285,7 @@
             $index++;
         }
         ?>
+<!--do while. first execute then condition-->
 <br><br>
         <?php
         $index = 6;
@@ -308,6 +310,7 @@
                $x+=10;
            }while($x <= 100);
          ?>
+<!--for loop-->
 <br><br>
          <?php
          $luckNumbers = array(4,8,14,16,23,42);
@@ -315,6 +318,7 @@
           echo "$luckNumbers[$i] <br>";
          }
          ?>
+<!--foreach-->
 <br><br>
         <?php
         $colors = array("red", "green", "blue", "yellow");
@@ -331,6 +335,7 @@
         echo "$x = $val<br>";
         }
        ?>
+<!--include html file-->
 <br><br>
        <?php
           echo include "header.html";
@@ -339,6 +344,7 @@
        <?php
          echo include "footer.html";
        ?>
+<!--include php file-->
 <br><br>
        <?php
        $title = "This is my First Post";
@@ -352,6 +358,7 @@
        echo $feelInMile;
         callhi("mas");
        ?>
+<!--class & objects-->
 <br><br>
         <?php
          class Book {
@@ -371,63 +378,151 @@
           echo "$book2->author";
         ?>
 <br><br>
-<?php
-class Fruit {
-    // Properties
-    var $name;
-    var $color;
 
-    // Methods
-    function set_name($name, $color) {
+        <?/*php
+       class //Fruit {
+       // Properties
+       var $name;
+       var $color;
+
+       // Methods
+       function set_name($name) {
         $this->name = $name;
-        $this->color = $color;
-    }
-    function get_name() {
+
+       }
+        function get_name() {
         return $this->name;
+        }
+     }
+        $mango = new Fruit();
+        $pears = new Fruit();
+        $mango -> set_name('Mango');
+        $pears ->set_name ('Pears');
+        echo $pears -> get_name();
+        echo "<br>";
+        echo $mango -> get_name();
+        echo "<br>";*/
+       ?>
+<br><br>
+        <?php
+        class Fruit {
+        // Properties
+        public $name;
+        public $color;
+
+          // Methods
+        function set_color($color) {
+        $this->color = $color;
+        }
+        function get_color() {
         return $this->color;
-    }
-}
-$mango = new Fruit();
-$pears = new Fruit();
-$mango -> set_name('Mango');
-$pears ->set_name ('Pears');
-echo $pears -> get_name();
-echo "<br>";
-echo $mango -> get_name();
-echo "<br>";
+        }
+      }
 
-$yellow = new Fruit();
-$red = new Fruit();
+       $red = new Fruit();
+       $yellow = new Fruit();
+       $red->set_color('Red');
+       $yellow->set_color('Yellow');
 
+       echo $red->get_color();
+       echo "<br>";
+       echo $yellow->get_color();
+       ?>
+<br><br>
+        <?= 'print this string' ?>
+<br><br>
+       <?php
+       $a_bool = TRUE;   // a boolean
+       $a_str  = "foo";  // a string
+       $a_str2 = 'foo';  // a string
+       $an_int = 12;     // an integer
 
+       echo gettype($a_bool);// prints out:  boolean
+       echo "<br>";
+       echo gettype($a_str);  // prints out:  string
+       echo "<br>";
+       // If this is an integer, increment it by four
+       if (is_int($an_int)) {
+       $an_int += 4;
+       echo "$an_int";
+       }
+       // If $a_bool is a string, print it out
+       // (does not print out anything)
+       if (is_string($a_bool)) {
+       echo "String: $a_bool";
+      }
+      ?>
+<br><br>
+<!--var-dump()-->
+      <?php
+      $a = array(1,2, array("a", "b", "c"));
+      var_dump($a);
+
+      ?>
+<br><br>
+      <?php
+      $b = 3.1;
+      $c = true;
+      var_dump($b, $c);
+      ?>
+<br><br>
+<!--print_r()-->
+      <?php
+      $a = array('a'=>'apple','b'=>'banana','c'=>'array', array('x','y','z'));
+      print_r($a);
+       ?>
+<br><br>
+      <?php
+      $b = array ('m' => 'monkey', 'foo' => 'bar', 'x' => array ('x', 'y', 'z'));
+$results = print_r($b, true); // $results now contains output from print_r
 ?>
 <br><br>
-<?/*php
-class Fruit {
-    // Properties
-    public $name;
-    public $color;
-
-    // Methods
-    function set_name($name) {
-        $this->name = $name;
-    }
-    function get_name() {
-        return $this->name;
-    }
-}
-
-$apple = new Fruit();
-$banana = new Fruit();
-$apple->set_name('Apple');
-$banana->set_name('Banana');
-
-echo $apple->get_name();
-echo "<br>";
-echo $banana->get_name();*/
-?>
-
-
+<!--callback func-->
+       <?php
+       // An example callback function
+       function my_callback_function(){
+           echo 'hello world';
+       }
+       // An example callback method
+       class MyClass {
+           static function myCallbackMethod() {
+               echo 'Hello World!';
+           }
+       }
+       // Type 1: Simple callback
+       call_user_func('my_callback_function');
+       echo "<br>";
+        //Type 2: Static class method call
+       call_user_func(array('MyClass', 'myCallbackMethod'));
+       echo "<br>";
+       // Type 3: Object method call
+       $obj = new MyClass();
+       call_user_func(array($obj, 'myCallbackMethod'));
+         echo "<br>";
+       // Type 4: Static class method call
+       call_user_func('MyClass::myCallbackMethod');
+         echo "<br>";
+       // Type 5: Relative static class method call
+       class A {
+           public static function who() {
+               echo "A\n";
+           }
+       }
+       class B extends A {
+           public static function who() {
+               echo "B\n";
+           }
+       }
+       call_user_func(array('B', 'parent::who')); // A
+       //Type 6: Objects implementing __invoke can be used as callables
+       class C {
+           public function __invoke($name) {
+               echo 'Hello ', $name, "\n";
+           }
+       }
+       $c = new C();
+       call_user_func($c, 'PHP!');
+       ?>
 
 
 
