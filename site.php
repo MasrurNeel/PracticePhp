@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Practice</title>
 </head>
 <body>
 <?php
@@ -140,7 +140,8 @@
 <br>
 
     <form action="site.php" method="post">
-      Apples: <input type="checkbox" name="fruits[]" value="apples"><br>       Oranges: <input type="checkbox" name="fruits[]" value="oranges"><br>
+        Apples: <input type="checkbox" name="fruits[]" value="apples"><br>
+        Oranges: <input type="checkbox" name="fruits[]" value="oranges"><br>
         Pears: <input type="checkbox" name="fruits[]" value="pears"><br>
         <input type="submit">
     </form>
@@ -360,7 +361,7 @@
        ?>
 <!--class & objects-->
 <br><br>
-        <?php
+        <?/*php
          class Book {
           var $title;
           var $author;
@@ -375,7 +376,7 @@
         $book2->title= "Lord of the rings";
         $book2->author= "Tolkien";
         $book2->pages= 700;
-          echo "$book2->author";
+          echo "$book2->author";*/
         ?>
 <br><br>
 
@@ -478,7 +479,7 @@ $results = print_r($b, true); // $results now contains output from print_r
 ?>
 <br><br>
 <!--callback func-->
-       <?php
+      <?php
        // An example callback function
        function my_callback_function(){
            echo 'hello world';
@@ -523,6 +524,106 @@ $results = print_r($b, true); // $results now contains output from print_r
        $c = new C();
        call_user_func($c, 'PHP!');
        ?>
+ <br><br>
+      <?php
+         class Book {
+           var $title;
+           var $author;
+           var $pages;
+
+           function __construct($aTitle,$aAuthor,$aPages){
+               $this->title = $aTitle;
+               $this->author = $aAuthor;
+               $this->pages = $aPages;
+           }
+         }
+         $book1 = new Book("Harry Potter","jk Howling", 500);
+      $book2 = new Book("Jey Peter","Tony", 5000);
+      echo $book1->pages;
+      ?>
+<br><br>
+         <?php
+         class student{
+            var $name;
+            var $major;
+            var $gpa;
+
+        function __construct($name, $major, $gpa){
+        $this->name = $name;
+        $this->major = $major;
+        $this->gpa = $gpa;
+        }
+        function hasHonors(){
+        if ($this->gpa >= 3.5) {
+            return "true";
+        }
+        return "false";
+       }
+         }
+        $student1 = new student("Mas","Arts", 2,4);
+        $student2 = new student("Zim","Science",3.6);
+        echo $student2->hasHonors();
+       ?>
+<br><br>
+       <?php
+         class Movie{
+             private $rating;
+             public $title;
+
+             function __construct($aRating,$aTitle){
+                 $this->setRating($aRating);
+                 $this->title = $aTitle;
+             }
+             function getRating(){
+                 return $this->rating;
+             }
+             function setRating($rating){
+                 if($rating =="G" || $rating == "PG" || $rating == "PG-13" || $rating == "NR"){
+                     $this->rating = $rating;
+             }
+             else{
+                 $this->rating="NR";
+             }
+
+         }
+         }
+         $avengers = new Movie("DOG", "Avengers");
+         //G, PG, PG-13, R, NR
+         //$avengers->setRating("asdf");
+         echo $avengers->getRating();
+       ?>
+
+<br><br>
+      <?php
+         class Chef{
+             function makeChicken(){
+               echo "The chef makes chicken <br>";
+             }
+             function makeSalad(){
+                echo "The chef makes salad <br>";
+             }
+             function makeSpecialDish(){
+                echo "The chef makes bbq <br>";
+             }
+         }
+
+         class ItalianChef extends Chef{
+                function makePasta(){
+                    echo "The italian chef makes pasta";
+                }
+                function makeSpecialDish(){
+                    echo "The chef makes chicken parm";
+                }
+         }
+          $chef = new Chef();
+         $chef->makeSpecialDish();
+
+      $italianChef = new ItalianChef();
+      $italianChef->makeSpecialDish();
+
+
+
+      ?>
 
 
 
